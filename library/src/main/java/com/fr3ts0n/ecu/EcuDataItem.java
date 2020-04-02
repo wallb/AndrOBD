@@ -29,7 +29,7 @@ import java.util.logging.Logger;
  * @author erwin
  */
 public class EcuDataItem
-	implements Cloneable
+	implements Cloneable, Comparable<EcuDataItem>
 {
 	/** conversion systems METRIC and IMPERIAL */
 	public static final int SYSTEM_METRIC = 0;
@@ -242,4 +242,8 @@ public class EcuDataItem
 		return (result);
 	}
 
+	@Override
+	public int compareTo(EcuDataItem other) {
+		return this.label.compareTo(other.label);
+	}
 }

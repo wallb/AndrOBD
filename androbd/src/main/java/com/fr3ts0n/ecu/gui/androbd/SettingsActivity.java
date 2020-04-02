@@ -35,6 +35,7 @@ import com.fr3ts0n.ecu.EcuDataItem;
 import com.fr3ts0n.ecu.prot.obd.ElmProt;
 import com.fr3ts0n.ecu.prot.obd.ObdProt;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -244,6 +245,7 @@ public class SettingsActivity
 
 			// collect data items for selection
 			items = ObdProt.dataItems.getSvcDataItems(ObdProt.OBD_SVC_DATA);
+			Collections.sort(items);
 			HashSet<String> selections = new HashSet<>();
 			CharSequence[] titles = new CharSequence[items.size()];
 			CharSequence[] keys = new CharSequence[items.size()];
