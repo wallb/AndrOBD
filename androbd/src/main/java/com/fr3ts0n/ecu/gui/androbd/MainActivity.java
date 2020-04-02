@@ -286,7 +286,7 @@ public class MainActivity extends PluginManager
 	/**
 	 * activation of night mode
 	 */
-	private boolean nightMode = false;
+	private boolean nightMode = true;
 	/**
 	 * current OBD service
 	 */
